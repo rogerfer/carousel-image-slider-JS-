@@ -1,0 +1,100 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.slideShow-container {
+    margin: 0 auto;
+    max-width: 1400px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.one, .two, .third {
+    height: 400px;
+    width: 100%;
+    background-color: lightseagreen;
+    border: 2px solid grey;
+    margin-bottom: 20px;
+}
+
+.one {
+    background-image: url("images/kyle-frost-QH_vWt_bwKc-unsplash.jpg");
+    background-size: cover;
+    background-position-y: 85%;
+}
+
+.two {
+    background-image: url("images/petr-slovacek-spC0l5B5068-unsplash.jpg");
+    background-size: cover;
+    background-position-y: 89%;
+}
+
+.third {
+    background-image: url("images/marcus-ganahl-Fmh77Pw3-oE-unsplash.jpg");
+    background-size: cover;
+    background-position-y: 65%;
+}
+
+.previous, .next {
+    cursor: pointer;
+    color: slateblue;
+    position: absolute;
+    width: auto;
+    top: 60%;
+    margin-top: -100px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.previous:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.4s ease-in-out;
+}
+
+.previous {
+    left: 0;
+    border-radius: 0 10px 10px 0px;
+}
+
+.next {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.dot:hover, .active {
+    background-color: lightslategrey;   
+}
+
+.dim {
+    -webkit-animation-name: dim;
+    -webkit-animation-duration: 1.9s;
+    animation-name: myDim;
+    animation-duration: 1.9s;
+}
+
+@keyframes myDim {
+    from { opacity: 0.5;}
+    to { opacity: 1}
+}
